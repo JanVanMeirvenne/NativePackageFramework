@@ -1,0 +1,17 @@
+[ApplicationName]
+MBAMClient
+[ApplicationVersion]
+25
+[ApplicationDescription]
+Installs the MBAM Client and ZOL settings (http://srv-mbamp1.domain.zol.be/MBAMRecoveryAndHardwareService/CoreService.svc)
+[ApplicationAuthor]
+Jan Van Meirvenne
+[ApplicationInstallSequence]
+Type=MSIInstall,Path=(ApplicationRoot)\MbamClientSetup-2.5.1100.0.msi,Parameters=
+#Type=File,Path=reg.exe,Parameters=import (ApplicationRoot)\ZOLMBAMSettings.reg
+#Type=File,Path=powershell.exe,Parameters=-executionpolicy bypass -command "get-service MBAMAgent|restart-service"
+[ApplicationUninstallSequence]
+Type=MSIUninstall,Path={AEC5BCA3-A2C5-46D7-9873-7698E6D3CAA4}
+[ApplicationDetectionSequence]
+Type=MSIDetection,Path={AEC5BCA3-A2C5-46D7-9873-7698E6D3CAA4}
+[ApplicationParameters]
