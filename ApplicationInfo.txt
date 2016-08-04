@@ -3,7 +3,7 @@ MBAMClient
 [ApplicationVersion]
 25
 [ApplicationDescription]
-Installs the MBAM Client and ZOL settings (http://srv-mbamp1.domain.zol.be/MBAMRecoveryAndHardwareService/CoreService.svc)
+Installs the MBAM Client and ZOL settings (http://bitlocker.contoso.com/MBAMRecoveryAndHardwareService/CoreService.svc)
 [ApplicationAuthor]
 Jan Van Meirvenne
 [ApplicationInstallSequence]
